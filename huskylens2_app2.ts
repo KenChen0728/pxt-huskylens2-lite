@@ -337,7 +337,6 @@ namespace huskylens2 {
     //% block="get face emotion recognition result"
     //% weight=104
     //% subcategory="face emotion recognition"
-    //% blockHidden=true
     export function getResultEmotionRecognition(): void {
         getResultInternal(Algorithm.AlgorithmEmotionRecognition);
     }
@@ -346,7 +345,6 @@ namespace huskylens2 {
     //% block="whether emotion detected"
     //% weight=103
     //% subcategory="face emotion recognition"
-    //% blockHidden=true
     export function availableEmotionRecognition(): boolean {
         return availableInternal(Algorithm.AlgorithmEmotionRecognition);
     }
@@ -358,7 +356,6 @@ namespace huskylens2 {
     //% block="emotion near center %property"
     //% weight=102
     //% subcategory="face emotion recognition"
-    //% blockHidden=true
     export function cachedCenterEmotionResult(property: BasePropertyId): number {
         const r = cachedCenterResultInternal(Algorithm.AlgorithmEmotionRecognition);
         return getEmotionPropertyValue(r, property);
@@ -368,7 +365,6 @@ namespace huskylens2 {
     //% block="number of detected emotions"
     //% weight=101
     //% subcategory="face emotion recognition"
-    //% blockHidden=true
     export function cachedResultNumEmotion(): number {
         return cachedResultNumInternal(Algorithm.AlgorithmEmotionRecognition);
     }
@@ -382,7 +378,6 @@ namespace huskylens2 {
     //% weight=100
     //% index.min=1 index.defl=1
     //% subcategory="face emotion recognition"
-    //% blockHidden=true
     export function cachedResultEmotionProperty(index: number, property: BasePropertyId): number {
         const r = cachedResultByIndexInternal(Algorithm.AlgorithmEmotionRecognition, index - 1);
         return getEmotionPropertyValue(r, property);
@@ -392,7 +387,6 @@ namespace huskylens2 {
     //% block="number of learned emotion Ids"
     //% weight=99
     //% subcategory="face emotion recognition"
-    //% blockHidden=true
     export function totalLearnedEmotionIds(): number {
         return cachedResultLearnedNumInternal(Algorithm.AlgorithmEmotionRecognition);
     }
@@ -405,7 +399,6 @@ namespace huskylens2 {
     //% weight=98
     //% index.min=1 index.defl=1
     //% subcategory="face emotion recognition"
-    //% blockHidden=true
     export function emotionIdExists(index: number): boolean {
         const r = cachedResultByIdInternal(Algorithm.AlgorithmEmotionRecognition, index);
         return r != null;
@@ -419,7 +412,6 @@ namespace huskylens2 {
     //% weight=97
     //% index.min=1 index.defl=1
     //% subcategory="face emotion recognition"
-    //% blockHidden=true
     export function totalEmotionById(index: number): number {
         return cachedResultNumByIdInternal(Algorithm.AlgorithmEmotionRecognition, index);
     }
@@ -433,7 +425,6 @@ namespace huskylens2 {
     //% weight=96
     //% index.min=1 index.defl=1
     //% subcategory="face emotion recognition"
-    //% blockHidden=true
     export function emotionPropertyById(index: number, property: BaseProperty): number {
         const r = cachedResultByIdInternal(Algorithm.AlgorithmEmotionRecognition, index);
         return getEmotionPropertyValueId(r, property);
@@ -450,7 +441,6 @@ namespace huskylens2 {
     //% Id.min=1 Id.defl=1
     //% n.min=1 n.defl=1
     //% subcategory="face emotion recognition"
-    //% blockHidden=true
     export function emotionPropertyByIdNth(Id: number, index: number, property: BaseProperty): number {
         const r = cachedIndexResultByIdInternal(Algorithm.AlgorithmEmotionRecognition, Id, index - 1);
         return getEmotionPropertyValueId(r, property);
