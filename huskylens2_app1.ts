@@ -25,7 +25,6 @@ namespace huskylens2 {
         AlgorithmObjectTracking = 3,          // 3
         //% block="color recognition"
         AlgorithmColorRecognition = 4,        // 4
-        //% blockHidden=true
         //% block="self learning classification"
         AlgorithmSelfLearningClassification = 6, // 6
         //% blockHidden=true
@@ -68,7 +67,6 @@ namespace huskylens2 {
         //% blockHidden=true
         //% block="object classification"
         AlgorithmObjectClassification = 5,   // 5
-        //% blockHidden=true
         //% block="self learning classification"
         AlgorithmSelfLearningClassification = 6, // 6
         //% blockHidden=true
@@ -161,7 +159,6 @@ namespace huskylens2 {
         //% blockHidden=true
         //% block="object classification"
         AlgorithmObjectClassification = 5,   // 5
-        //% blockHidden=true
         //% block="self learning classification"
         AlgorithmSelfLearningClassification = 6, // 6
         //% blockHidden=true
@@ -824,7 +821,6 @@ namespace huskylens2 {
     //% block="get self learning classification result"
     //% weight=162
     //% subcategory="self learning classification"
-    //% blockHidden=true
     export function getResultSelfLearningClassification(): void {
         getResultInternal(Algorithm.AlgorithmSelfLearningClassification);
     }
@@ -833,7 +829,6 @@ namespace huskylens2 {
     //% block="self learning classification detected?"
     //% weight=161
     //% subcategory="self learning classification"
-    //% blockHidden=true
     export function availableSelfLearningClassification(): boolean {
         return availableInternal(Algorithm.AlgorithmSelfLearningClassification);
     }
@@ -845,7 +840,6 @@ namespace huskylens2 {
     //% block="self learning classification %property"
     //% weight=160
     //% subcategory="self learning classification"
-    //% blockHidden=true
     export function cachedSelfLearningClassificationResult(property: SelfLearningClassificationProperty): any {
         const r = cachedCenterResultInternal(Algorithm.AlgorithmSelfLearningClassification);
         return getSelfLearningClassificationPropertyValue(r, property);
