@@ -100,6 +100,7 @@ namespace huskylens2 {
     //% block="request fall detection data and store in results"
     //% weight=149
     //% subcategory="fall detection"
+    //% blockHidden=true
     export function requestFallDetectionData(): void {
         getResultInternal(Algorithm.AlgorithmFallDownRecognition);
     }
@@ -110,6 +111,7 @@ namespace huskylens2 {
     //% block="is fall detected?"
     //% weight=148
     //% subcategory="fall detection"
+    //% blockHidden=true
     export function fallDetected(): boolean {
         return availableInternal(Algorithm.AlgorithmFallDownRecognition);
     }
@@ -121,6 +123,7 @@ namespace huskylens2 {
     //% block="closest fall detection %property"
     //% weight=147
     //% subcategory="fall detection"
+    //% blockHidden=true
     export function nearestFallDetection(property: BasePropertyId): any {
         const r = cachedCenterResultInternal(Algorithm.AlgorithmFallDownRecognition);
         return getFallDetectionPropertyValue(r, property);
@@ -132,6 +135,7 @@ namespace huskylens2 {
     //% block="total number of fall detections"
     //% weight=146
     //% subcategory="fall detection"
+    //% blockHidden=true
     export function totalFallDetections(): number {
         return cachedResultNumInternal(Algorithm.AlgorithmFallDownRecognition);
     }
@@ -146,6 +150,7 @@ namespace huskylens2 {
     //% weight=145
     //% index.min=1 index.defl=1
     //% subcategory="fall detection"
+    //% blockHidden=true
     export function fallDetectionProperty(index: number, property: BasePropertyId): any {
         const r = cachedResultByIndexInternal(Algorithm.AlgorithmFallDownRecognition, index - 1);
         return getFallDetectionPropertyValue(r, property);
@@ -180,6 +185,7 @@ namespace huskylens2 {
     //% block="request face orientation data and store in results"
     //% weight=139
     //% subcategory="faceorientation recognition"
+    //% blockHidden=true
     export function requestFaceOrientationData(): void {
         getResultInternal(Algorithm.AlgorithmFaceOrientation);
     }
@@ -190,6 +196,7 @@ namespace huskylens2 {
     //% block="is face orientation detected?"
     //% weight=138
     //% subcategory="faceorientation recognition"
+    //% blockHidden=true
     export function faceOrientationDetected(): boolean {
         return availableInternal(Algorithm.AlgorithmFaceOrientation);
     }
@@ -201,6 +208,7 @@ namespace huskylens2 {
     //% block="closest face orientation %property"
     //% weight=137
     //% subcategory="faceorientation recognition"
+    //% blockHidden=true
     export function nearestFaceOrientation(property: FaceOrientationProperty): any {
         const r = cachedCenterResultInternal(Algorithm.AlgorithmFaceOrientation);
         return getFaceOrientationPropertyValue(r, property);
@@ -212,6 +220,7 @@ namespace huskylens2 {
     //% block="total number of face orientations detected"
     //% weight=136
     //% subcategory="faceorientation recognition"
+    //% blockHidden=true
     export function totalFaceOrientations(): number {
         return cachedResultNumInternal(Algorithm.AlgorithmFaceOrientation);
     }
@@ -222,6 +231,7 @@ namespace huskylens2 {
     //% block="total number of learned face orientation Ids"
     //% weight=135
     //% subcategory="faceorientation recognition"
+    //% blockHidden=true
     export function totalLearnedFaceOrientations(): number {
         return cachedResultLearnedNumInternal(Algorithm.AlgorithmFaceOrientation);
     }
@@ -235,6 +245,7 @@ namespace huskylens2 {
     //% weight=134
     //% index.min=1 index.defl=1
     //% subcategory="faceorientation recognition"
+    //% blockHidden=true
     export function faceOrientationProperty(index: number, property: FaceOrientationProperty): any {
         const r = cachedResultByIndexInternal(Algorithm.AlgorithmFaceOrientation, index - 1);
         return getFaceOrientationPropertyValue(r, property);
@@ -248,6 +259,7 @@ namespace huskylens2 {
     //% weight=133
     //% Id.min=1 Id.defl=1
     //% subcategory="faceorientation recognition"
+    //% blockHidden=true
     export function faceOrientationIdExists(Id: number): boolean {
         const r = cachedResultByIdInternal(Algorithm.AlgorithmFaceOrientation, Id);
         return r != null;
@@ -261,6 +273,7 @@ namespace huskylens2 {
     //% weight=132
     //% Id.min=1 Id.defl=1
     //% subcategory="faceorientation recognition"
+    //% blockHidden=true
     export function totalFaceOrientationsWithId(Id: number): number {
         return cachedResultNumByIdInternal(Algorithm.AlgorithmFaceOrientation, Id);
     }
@@ -274,6 +287,7 @@ namespace huskylens2 {
     //% weight=131
     //% Id.min=1 Id.defl=1
     //% subcategory="faceorientation recognition"
+    //% blockHidden=true
     export function faceOrientationWithId(Id: number, property: FaceOrientationPropertyId): any {
         const r = cachedResultByIdInternal(Algorithm.AlgorithmFaceOrientation, Id);
         return getFaceOrientationPropertyValue(r, property);
@@ -291,6 +305,7 @@ namespace huskylens2 {
     //% index.min=1 index.defl=1
 
     //% subcategory="faceorientation recognition"
+    //% blockHidden=true
     export function faceOrientationWithIdProperty(Id: number, index: number, property: FaceOrientationPropertyId): any {
         const r = cachedIndexResultByIdInternal(Algorithm.AlgorithmFaceOrientation, Id, index - 1);
         return getFaceOrientationPropertyValue(r, property);
@@ -324,6 +339,7 @@ namespace huskylens2 {
     //% block="request gaze direction data and store in results"
     //% weight=129
     //% subcategory="gaze direction detection"
+    //% blockHidden=true
     export function requestEyeGazeData(): void {
         getResultInternal(Algorithm.AlgorithmGazeRecognition);
     }
@@ -334,6 +350,7 @@ namespace huskylens2 {
     //% block="is gaze direction detected?"
     //% weight=128
     //% subcategory="gaze direction detection"
+    //% blockHidden=true
     export function eyeGazeDetected(): boolean {
         return availableInternal(Algorithm.AlgorithmGazeRecognition);
     }
@@ -345,6 +362,7 @@ namespace huskylens2 {
     //% block="closest gaze direction %property"
     //% weight=127
     //% subcategory="gaze direction detection"
+    //% blockHidden=true
     export function nearestEyeGaze(property: EyeGazeProperty): any {
         const r = cachedCenterResultInternal(Algorithm.AlgorithmGazeRecognition);
         return getEyeGazePropertyValue(r, property);
@@ -356,6 +374,7 @@ namespace huskylens2 {
     //% block="total number of gaze directions detected"
     //% weight=126
     //% subcategory="gaze direction detection"
+    //% blockHidden=true
     export function totalEyeGazes(): number {
         return cachedResultNumInternal(Algorithm.AlgorithmGazeRecognition);
     }
@@ -366,6 +385,7 @@ namespace huskylens2 {
     //% block="total number of learned gaze direction Ids"
     //% weight=125
     //% subcategory="gaze direction detection"
+    //% blockHidden=true
     export function totalLearnedEyeGazes(): number {
         return cachedResultLearnedNumInternal(Algorithm.AlgorithmGazeRecognition);
     }
@@ -379,6 +399,7 @@ namespace huskylens2 {
     //% weight=124
     //% index.min=1 index.defl=1
     //% subcategory="gaze direction detection"
+    //% blockHidden=true
     export function eyeGazeProperty(index: number, property: EyeGazeProperty): any {
         const r = cachedResultByIndexInternal(Algorithm.AlgorithmGazeRecognition, index - 1);
         return getEyeGazePropertyValue(r, property);
@@ -392,6 +413,7 @@ namespace huskylens2 {
     //% weight=123
     //% Id.min=1 Id.defl=1
     //% subcategory="gaze direction detection"
+    //% blockHidden=true
     export function gazeIdExists(Id: number): boolean {
         const r = cachedResultByIdInternal(Algorithm.AlgorithmGazeRecognition, Id);
         return r != null;
@@ -405,6 +427,7 @@ namespace huskylens2 {
     //% weight=122
     //% Id.min=1 Id.defl=1
     //% subcategory="gaze direction detection"
+    //% blockHidden=true
     export function totalEyeGazesWithId(Id: number): number {
         return cachedResultNumByIdInternal(Algorithm.AlgorithmGazeRecognition, Id);
     }
@@ -418,6 +441,7 @@ namespace huskylens2 {
     //% weight=121
     //% Id.min=1 Id.defl=1
     //% subcategory="gaze direction detection"
+    //% blockHidden=true
     export function gazeWithId(Id: number, property: EyeGazePropertyId): any {
         const r = cachedResultByIdInternal(Algorithm.AlgorithmGazeRecognition, Id);
         return getEyeGazePropertyValue(r, property);
@@ -434,6 +458,7 @@ namespace huskylens2 {
     //% Id.min=1 Id.defl=1
     //% index.min=1 index.defl=1
     //% subcategory="gaze direction detection"
+    //% blockHidden=true
     export function gazeWithIdProperty(Id: number, index: number, property: EyeGazePropertyId): any {
         const r = cachedIndexResultByIdInternal(Algorithm.AlgorithmGazeRecognition, Id, index - 1);
         return getEyeGazePropertyValue(r, property);
@@ -449,6 +474,7 @@ namespace huskylens2 {
     //% block="switch to custom-trained model, model Id%num"
     //% weight=119
     //% subcategory="self training"
+    //% blockHidden=true
     //% num.min=128 num.max=255 num.defl=128
     export function selfTrainedModelSwitchAlgorithm(num: number): void {
         // Switch to self-trained model
@@ -463,6 +489,7 @@ namespace huskylens2 {
     //% block="model Id%num request data and save to results"
     //% weight=118
     //% subcategory="self training"
+    //% blockHidden=true
     //% num.min=128 num.max=255 num.defl=128
     export function requestData(num: number): void {
         // Request data and save to result cache
@@ -476,6 +503,7 @@ namespace huskylens2 {
     //% block="model Id%num target detected?"
     //% weight=117
     //% subcategory="self training"
+    //% blockHidden=true
     //% num.min=128 num.max=255 num.defl=128
     export function detected(num: number): boolean {
         return availableInternal(num);
@@ -489,6 +517,7 @@ namespace huskylens2 {
     //% block="model Id%num target closest to center%property"
     //% weight=116
     //% subcategory="self training"
+    //% blockHidden=true
     //% num.min=128 num.max=255 num.defl=128
     //% property.defl=huskylens2.BasePropertyId.Id
     export function nearest(num: number, property: BasePropertyId): any {
@@ -516,6 +545,7 @@ namespace huskylens2 {
     //% block="model Id%num total number of detected targets"
     //% weight=115
     //% subcategory="self training"
+    //% blockHidden=true
     //% num.min=128 num.max=255 num.defl=128
     export function total(num: number): number {
         return cachedResultNumInternal(num);
@@ -528,6 +558,7 @@ namespace huskylens2 {
     //% block="model Id%num total number of learned target Ids"
     //% weight=114
     //% subcategory="self training"
+    //% blockHidden=true
     //% num.min=128 num.max=255 num.defl=128
     export function totalLearned(num: number): number {
         return cachedResultMaxIdInternal(num);
@@ -542,6 +573,7 @@ namespace huskylens2 {
     //% block="model Id %num No. %index target %property"
     //% weight=113
     //% subcategory="self training"
+    //% blockHidden=true
     //% num.min=128 num.max=255 num.defl=128
     //% index.min=1 index.max=6 index.defl=1
     //% property.defl=huskylens2.BasePropertyId.Id
@@ -575,6 +607,7 @@ namespace huskylens2 {
     //% block="model Id%num target Id%Id exists?"
     //% weight=112
     //% subcategory="self training"
+    //% blockHidden=true
     //% num.min=128 num.max=255 num.defl=128
     //% Id.min=1 Id.max=100 Id.defl=1
     export function IdExists(num: number, Id: number): boolean {
@@ -589,6 +622,7 @@ namespace huskylens2 {
     //% block="model Id%num total number of targets with Id%Id"
     //% weight=111
     //% subcategory="self training"
+    //% blockHidden=true
     //% num.min=128 num.max=255 num.defl=128
     //% Id.min=1 Id.max=100 Id.defl=1
     export function totalWithId(num: number, Id: number): number {
@@ -604,6 +638,7 @@ namespace huskylens2 {
     //% block="model Id%num target with Id%Id%property"
     //% weight=110
     //% subcategory="self training"
+    //% blockHidden=true
     //% num.min=128 num.max=255 num.defl=128
     //% Id.min=1 Id.max=100 Id.defl=1
     //% property.defl=huskylens2.BaseProperty.Name
@@ -637,6 +672,7 @@ namespace huskylens2 {
     //% block="model Id %num Id %Id the %index target of %property""
     //% weight=109
     //% subcategory="self training"
+    //% blockHidden=true
     //% num.min=128 num.max=255 num.defl=128
     //% Id.min=1 Id.max=100 Id.defl=1
     //% index.min=1 index.max=6 index.defl=1

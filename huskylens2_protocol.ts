@@ -1005,6 +1005,7 @@ namespace huskylens2 {
     //% weight=119
     //% volume.min=0 volume.max=100 volume.defl=50
     //% subcategory="multimedia"
+    //% blockHidden=true
     export function playMusic(name: string, volume: number): void {
         if (volume < 0) volume = 0;
         if (volume > 100) volume = 100;
@@ -1043,6 +1044,7 @@ namespace huskylens2 {
     //% block="take photo"
     //% weight=118
     //% subcategory="multimedia"
+    //% blockHidden=true
     export function takePhoto(): void {
         const dataBuf = createInitializedBuffer(2);  // Set resolution 2: RESOLUTION_1280x720
         const packetData = sendCommandAndGetResponse(Macro.CommandActionTakePhoto, Algorithm.AlgorithmAny, dataBuf);
@@ -1057,6 +1059,7 @@ namespace huskylens2 {
     //% block="take a screenshot"
     //% weight=116
     //% subcategory="multimedia"
+    //% blockHidden=true
     export function takeScreenshot(): void {
         const dataBuf = Buffer.create(0);
         const pkt = PacketHead.fromFields({
@@ -1077,6 +1080,7 @@ namespace huskylens2 {
     //% block="obtain the name of the saved screenshot"
     //% weight=115
     //% subcategory="multimedia"
+    //% blockHidden=true
     export function storedScreenshotName(): string {
         return screenshotName;
     }
@@ -1087,6 +1091,7 @@ namespace huskylens2 {
     //% block="obtain the names of the stored photos"
     //% weight=117
     //% subcategory="multimedia"
+    //% blockHidden=true
     export function storedPhotoName(): string {
         return photoName;
     }
@@ -1141,6 +1146,7 @@ namespace huskylens2 {
      */
     //% block="draw or update indicator box color%color line width%lineWidth x%x y%y width%w height%h"
     //% subcategory="screen display"
+    //% blockHidden=true
     //% weight=90
     //% color.min=0 
     //% lineWidth.min=1 lineWidth.max=10
@@ -1163,6 +1169,7 @@ namespace huskylens2 {
      */
     //% block="draw new rectangle color%color line width%lineWidth x%x y%y width%w height%h"
     //% subcategory="screen display"
+    //% blockHidden=true
     //% weight=89
     //% color.min=0 
     //% lineWidth.min=1 lineWidth.max=10
@@ -1203,6 +1210,7 @@ namespace huskylens2 {
      */
     //% block="display text color%color fontSize%fontSize x%x y%y content%content"
     //% subcategory="screen display"
+    //% blockHidden=true
     //% weight=91
     //% color.min=0
     //% x.min=0 x.max=640
@@ -1252,6 +1260,7 @@ namespace huskylens2 {
      */
     //% block="clear text"
     //% subcategory="screen display"
+    //% blockHidden=true
     //% weight=88
     export function clearText(): void {
         sendCommandAndCheckResponse(Macro.CommandActionClearText, Algorithm.AlgorithmAny, Buffer.create(0));
@@ -1262,6 +1271,7 @@ namespace huskylens2 {
      */
     //% block="clear indicator boxes and rectangles"
     //% subcategory="screen display"
+    //% blockHidden=true
     //% weight=87
     export function clearBoxes(): void {
         sendCommandAndCheckResponse(Macro.CommandActionClearRect, Algorithm.AlgorithmAny, Buffer.create(0));
@@ -1275,6 +1285,7 @@ namespace huskylens2 {
      */
     //% block="set color red%red green%green blue%blue"
     //% subcategory="screen display"
+    //% blockHidden=true
     //% weight=86
     //% red.min=0 red.max=255
     //% green.min=0 green.max=255

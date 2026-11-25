@@ -47,6 +47,7 @@ namespace huskylens2 {
     //% block="get license plate recognition result"
     //% weight=129
     //% subcategory="license plate recognition"
+    //% blockHidden=true
     export function getResultPlateRecognition(): void {
         getResultInternal(Algorithm.AlgorithmLicenseRecognition);
     }
@@ -55,6 +56,7 @@ namespace huskylens2 {
     //% block="license plate detected?"
     //% weight=128
     //% subcategory="license plate recognition"
+    //% blockHidden=true
     export function availablePlateRecognition(): boolean {
         return availableInternal(Algorithm.AlgorithmLicenseRecognition);
     }
@@ -66,6 +68,7 @@ namespace huskylens2 {
     //% block="plate near center %property"
     //% weight=127
     //% subcategory="license plate recognition"
+    //% blockHidden=true
     export function cachedCenterPlateResult(property: BasePropertyContentId): any {
         const r = cachedCenterResultInternal(Algorithm.AlgorithmLicenseRecognition);
         return getPlatePropertyValue(r, property);
@@ -75,6 +78,7 @@ namespace huskylens2 {
     //% block="number of detected plates"
     //% weight=126
     //% subcategory="license plate recognition"
+    //% blockHidden=true
     export function cachedResultNumPlate(): number {
         return cachedResultNumInternal(Algorithm.AlgorithmLicenseRecognition);
     }
@@ -88,6 +92,7 @@ namespace huskylens2 {
     //% weight=125
     //% index.min=1 index.defl=1
     //% subcategory="license plate recognition"
+    //% blockHidden=true
     export function cachedResultPlateProperty(index: number, property: BasePropertyContentId): any {
         const r = cachedResultByIndexInternal(Algorithm.AlgorithmLicenseRecognition, index - 1);
         return getPlatePropertyValue(r, property);
@@ -97,6 +102,7 @@ namespace huskylens2 {
     //% block="number of learned plate Ids"
     //% weight=124
     //% subcategory="license plate recognition"
+    //% blockHidden=true
     export function totalLearnedPlateIds(): number {
         return cachedResultLearnedNumInternal(Algorithm.AlgorithmLicenseRecognition);
     }
@@ -109,6 +115,7 @@ namespace huskylens2 {
     //% weight=123
     //% index.min=1 index.defl=1
     //% subcategory="license plate recognition"
+    //% blockHidden=true
     export function plateIdExists(index: number): boolean {
         const r = cachedResultByIdInternal(Algorithm.AlgorithmLicenseRecognition, index);
         return r != null;
@@ -122,6 +129,7 @@ namespace huskylens2 {
     //% weight=122
     //% index.min=1 index.defl=1
     //% subcategory="license plate recognition"
+    //% blockHidden=true
     export function totalPlateById(index: number): number {
         return cachedResultNumByIdInternal(Algorithm.AlgorithmLicenseRecognition, index);
     }
@@ -135,6 +143,7 @@ namespace huskylens2 {
     //% weight=121
     //% index.min=1 index.defl=1
     //% subcategory="license plate recognition"
+    //% blockHidden=true
     export function platePropertyById(index: number, property: BasePropertyContent): any {
         const r = cachedResultByIdInternal(Algorithm.AlgorithmLicenseRecognition, index);
         return getPlatePropertyValue(r, property);
@@ -151,6 +160,7 @@ namespace huskylens2 {
     //% Id.min=1 Id.defl=1
     //% n.min=1 n.defl=1
     //% subcategory="license plate recognition"
+    //% blockHidden=true
     export function platePropertyByIdNth(Id: number, index: number, property: BasePropertyContent): any {
         const r = cachedIndexResultByIdInternal(Algorithm.AlgorithmLicenseRecognition, Id, index - 1);
         return getPlatePropertyValue(r, property);
@@ -178,6 +188,7 @@ namespace huskylens2 {
     //% block="get optical char recognition result"
     //% weight=119
     //% subcategory="optical char recognition"
+    //% blockHidden=true
     export function getResultTextRecognition(): void {
         getResultInternal(Algorithm.AlgorithmOcrRecognition);
     }
@@ -186,6 +197,7 @@ namespace huskylens2 {
     //% block="whether text region detected"
     //% weight=118
     //% subcategory="optical char recognition"
+    //% blockHidden=true
     export function availableTextRecognition(): boolean {
         return availableInternal(Algorithm.AlgorithmOcrRecognition);
     }
@@ -197,6 +209,7 @@ namespace huskylens2 {
     //% block="text region near center %property"
     //% weight=117
     //% subcategory="optical char recognition"
+    //% blockHidden=true
     export function cachedCenterTextResult(property: BasePropertyContentId): any {
         const r = cachedCenterResultInternal(Algorithm.AlgorithmOcrRecognition);
         return getTextPropertyValue(r, property);
@@ -206,6 +219,7 @@ namespace huskylens2 {
     //% block="number of learned text region Ids"
     //% weight=114
     //% subcategory="optical char recognition"
+    //% blockHidden=true
     export function totalLearnedTextIds(): number {
         return cachedResultLearnedNumInternal(Algorithm.AlgorithmOcrRecognition);
     }
@@ -218,6 +232,7 @@ namespace huskylens2 {
     //% weight=113
     //% index.min=1 index.defl=1
     //% subcategory="optical char recognition"
+    //% blockHidden=true
     export function textIdExists(index: number): boolean {
         const r = cachedResultByIdInternal(Algorithm.AlgorithmOcrRecognition, index);
         return r != null;
@@ -232,6 +247,7 @@ namespace huskylens2 {
     //% weight=111
     //% index.min=1 index.defl=1
     //% subcategory="optical char recognition"
+    //% blockHidden=true
     export function textPropertyById(index: number, property: BasePropertyContent): any {
         const r = cachedResultByIdInternal(Algorithm.AlgorithmOcrRecognition, index);
         return getTextPropertyValue(r, property);
@@ -321,6 +337,7 @@ namespace huskylens2 {
     //% block="get face emotion recognition result"
     //% weight=104
     //% subcategory="face emotion recognition"
+    //% blockHidden=true
     export function getResultEmotionRecognition(): void {
         getResultInternal(Algorithm.AlgorithmEmotionRecognition);
     }
@@ -329,6 +346,7 @@ namespace huskylens2 {
     //% block="whether emotion detected"
     //% weight=103
     //% subcategory="face emotion recognition"
+    //% blockHidden=true
     export function availableEmotionRecognition(): boolean {
         return availableInternal(Algorithm.AlgorithmEmotionRecognition);
     }
@@ -340,6 +358,7 @@ namespace huskylens2 {
     //% block="emotion near center %property"
     //% weight=102
     //% subcategory="face emotion recognition"
+    //% blockHidden=true
     export function cachedCenterEmotionResult(property: BasePropertyId): number {
         const r = cachedCenterResultInternal(Algorithm.AlgorithmEmotionRecognition);
         return getEmotionPropertyValue(r, property);
@@ -349,6 +368,7 @@ namespace huskylens2 {
     //% block="number of detected emotions"
     //% weight=101
     //% subcategory="face emotion recognition"
+    //% blockHidden=true
     export function cachedResultNumEmotion(): number {
         return cachedResultNumInternal(Algorithm.AlgorithmEmotionRecognition);
     }
@@ -362,6 +382,7 @@ namespace huskylens2 {
     //% weight=100
     //% index.min=1 index.defl=1
     //% subcategory="face emotion recognition"
+    //% blockHidden=true
     export function cachedResultEmotionProperty(index: number, property: BasePropertyId): number {
         const r = cachedResultByIndexInternal(Algorithm.AlgorithmEmotionRecognition, index - 1);
         return getEmotionPropertyValue(r, property);
@@ -371,6 +392,7 @@ namespace huskylens2 {
     //% block="number of learned emotion Ids"
     //% weight=99
     //% subcategory="face emotion recognition"
+    //% blockHidden=true
     export function totalLearnedEmotionIds(): number {
         return cachedResultLearnedNumInternal(Algorithm.AlgorithmEmotionRecognition);
     }
@@ -383,6 +405,7 @@ namespace huskylens2 {
     //% weight=98
     //% index.min=1 index.defl=1
     //% subcategory="face emotion recognition"
+    //% blockHidden=true
     export function emotionIdExists(index: number): boolean {
         const r = cachedResultByIdInternal(Algorithm.AlgorithmEmotionRecognition, index);
         return r != null;
@@ -396,6 +419,7 @@ namespace huskylens2 {
     //% weight=97
     //% index.min=1 index.defl=1
     //% subcategory="face emotion recognition"
+    //% blockHidden=true
     export function totalEmotionById(index: number): number {
         return cachedResultNumByIdInternal(Algorithm.AlgorithmEmotionRecognition, index);
     }
@@ -409,6 +433,7 @@ namespace huskylens2 {
     //% weight=96
     //% index.min=1 index.defl=1
     //% subcategory="face emotion recognition"
+    //% blockHidden=true
     export function emotionPropertyById(index: number, property: BaseProperty): number {
         const r = cachedResultByIdInternal(Algorithm.AlgorithmEmotionRecognition, index);
         return getEmotionPropertyValueId(r, property);
@@ -425,6 +450,7 @@ namespace huskylens2 {
     //% Id.min=1 Id.defl=1
     //% n.min=1 n.defl=1
     //% subcategory="face emotion recognition"
+    //% blockHidden=true
     export function emotionPropertyByIdNth(Id: number, index: number, property: BaseProperty): number {
         const r = cachedIndexResultByIdInternal(Algorithm.AlgorithmEmotionRecognition, Id, index - 1);
         return getEmotionPropertyValueId(r, property);
@@ -581,6 +607,7 @@ namespace huskylens2 {
     //% block="get QR code recognition result"
     //% weight=84
     //% subcategory="QR code recognition"
+    //% blockHidden=true
     export function getResultQRCodeRecognition(): void {
         getResultInternal(Algorithm.AlgorithmQrCodeRecognition);
     }
@@ -589,6 +616,7 @@ namespace huskylens2 {
     //% block="whether QR code detected"
     //% weight=83
     //% subcategory="QR code recognition"
+    //% blockHidden=true
     export function availableQRCodeRecognition(): boolean {
         return availableInternal(Algorithm.AlgorithmQrCodeRecognition);
     }
@@ -600,6 +628,7 @@ namespace huskylens2 {
     //% block="QR code near center %property"
     //% weight=82
     //% subcategory="QR code recognition"
+    //% blockHidden=true
     export function cachedCenterQRCodeResult(property: BasePropertyContentId): any {
         const r = cachedCenterResultInternal(Algorithm.AlgorithmQrCodeRecognition);
         return getQRCodePropertyValue(r, property);
@@ -609,6 +638,7 @@ namespace huskylens2 {
     //% block="number of detected QR codes"
     //% weight=81
     //% subcategory="QR code recognition"
+    //% blockHidden=true
     export function cachedResultNumQRCode(): number {
         return cachedResultNumInternal(Algorithm.AlgorithmQrCodeRecognition);
     }
@@ -622,6 +652,7 @@ namespace huskylens2 {
     //% weight=80
     //% index.min=1 index.defl=1
     //% subcategory="QR code recognition"
+    //% blockHidden=true
     export function cachedResultQRCodeProperty(index: number, property: BasePropertyContentId): any {
         const r = cachedResultByIndexInternal(Algorithm.AlgorithmQrCodeRecognition, index - 1);
         return getQRCodePropertyValue(r, property);
@@ -631,6 +662,7 @@ namespace huskylens2 {
     //% block="number of learned QR code Ids"
     //% weight=79
     //% subcategory="QR code recognition"
+    //% blockHidden=true
     export function totalLearnedQRCodeIds(): number {
         return cachedResultLearnedNumInternal(Algorithm.AlgorithmQrCodeRecognition);
     }
@@ -643,6 +675,7 @@ namespace huskylens2 {
     //% weight=78
     //% index.min=1 index.defl=1
     //% subcategory="QR code recognition"
+    //% blockHidden=true
     export function qrcodeIdExists(index: number): boolean {
         const r = cachedResultByIdInternal(Algorithm.AlgorithmQrCodeRecognition, index);
         return r != null;
@@ -656,6 +689,7 @@ namespace huskylens2 {
     //% weight=77
     //% index.min=1 index.defl=1
     //% subcategory="QR code recognition"
+    //% blockHidden=true
     export function totalQRCodeById(index: number): number {
         return cachedResultNumByIdInternal(Algorithm.AlgorithmQrCodeRecognition, index);
     }
@@ -669,6 +703,7 @@ namespace huskylens2 {
     //% weight=76
     //% index.min=1 index.defl=1
     //% subcategory="QR code recognition"
+    //% blockHidden=true
     export function QRCodePropertyById(index: number, property: BasePropertyContent): any {
         const r = cachedResultByIdInternal(Algorithm.AlgorithmQrCodeRecognition, index);
         return getQRCodePropertyValue(r, property);
@@ -685,6 +720,7 @@ namespace huskylens2 {
     //% Id.min=1 Id.defl=1
     //% n.min=1 n.defl=1
     //% subcategory="QR code recognition"
+    //% blockHidden=true
     export function QRCodePropertyByIdNth(Id: number, index: number, property: BasePropertyContent): any {
         const r = cachedIndexResultByIdInternal(Algorithm.AlgorithmQrCodeRecognition, Id, index - 1);
         return getQRCodePropertyValue(r, property);
@@ -714,6 +750,7 @@ namespace huskylens2 {
     //% block="get barcode recognition result"
     //% weight=74
     //% subcategory="barcode recognition"
+    //% blockHidden=true
     export function getResultBarcodeRecognition(): void {
         getResultInternal(Algorithm.AlgorithmBarcodeRecognition);
     }
@@ -722,6 +759,7 @@ namespace huskylens2 {
     //% block="whether barcode detected"
     //% weight=73
     //% subcategory="barcode recognition"
+    //% blockHidden=true
     export function availableBarcodeRecognition(): boolean {
         return availableInternal(Algorithm.AlgorithmBarcodeRecognition);
     }
@@ -733,6 +771,7 @@ namespace huskylens2 {
     //% block="barcode near center %property"
     //% weight=72
     //% subcategory="barcode recognition"
+    //% blockHidden=true
     export function cachedCenterBarcodeResult(property: BasePropertyContentId): any {
         const r = cachedCenterResultInternal(Algorithm.AlgorithmBarcodeRecognition);
         return getBarcodePropertyValue(r, property);
@@ -742,6 +781,7 @@ namespace huskylens2 {
     //% block="number of detected barcodes"
     //% weight=71
     //% subcategory="barcode recognition"
+    //% blockHidden=true
     export function cachedResultNumBarcode(): number {
         return cachedResultNumInternal(Algorithm.AlgorithmBarcodeRecognition);
     }
@@ -755,6 +795,7 @@ namespace huskylens2 {
     //% weight=70
     //% index.min=1 index.defl=1
     //% subcategory="barcode recognition"
+    //% blockHidden=true
     export function cachedResultBarcodeProperty(index: number, property: BasePropertyContentId): any {
         const r = cachedResultByIndexInternal(Algorithm.AlgorithmBarcodeRecognition, index - 1);
         return getBarcodePropertyValue(r, property);
@@ -764,6 +805,7 @@ namespace huskylens2 {
     //% block="number of learned barcode Ids"
     //% weight=69
     //% subcategory="barcode recognition"
+    //% blockHidden=true
     export function totalLearnedBarcodeIds(): number {
         return cachedResultLearnedNumInternal(Algorithm.AlgorithmBarcodeRecognition);
     }
@@ -776,6 +818,7 @@ namespace huskylens2 {
     //% weight=68
     //% index.min=1 index.defl=1
     //% subcategory="barcode recognition"
+    //% blockHidden=true
     export function barcodeIdExists(index: number): boolean {
         const r = cachedResultByIdInternal(Algorithm.AlgorithmBarcodeRecognition, index);
         return r != null;
@@ -789,6 +832,7 @@ namespace huskylens2 {
     //% weight=67
     //% index.min=1 index.defl=1
     //% subcategory="barcode recognition"
+    //% blockHidden=true
     export function totalBarcodeById(index: number): number {
         return cachedResultNumByIdInternal(Algorithm.AlgorithmBarcodeRecognition, index);
     }
@@ -802,6 +846,7 @@ namespace huskylens2 {
     //% weight=66
     //% index.min=1 index.defl=1
     //% subcategory="barcode recognition"
+    //% blockHidden=true
     export function barcodePropertyById(index: number, property: BasePropertyContent): any {
         const r = cachedResultByIdInternal(Algorithm.AlgorithmBarcodeRecognition, index);
         return getBarcodePropertyValue(r, property);
@@ -818,6 +863,7 @@ namespace huskylens2 {
     //% Id.min=1 Id.defl=1
     //% n.min=1 n.defl=1
     //% subcategory="barcode recognition"
+    //% blockHidden=true
     export function barcodePropertyByIdNth(Id: number, index: number, property: BasePropertyContent): any {
         const r = cachedIndexResultByIdInternal(Algorithm.AlgorithmBarcodeRecognition, Id, index - 1);
         return getBarcodePropertyValue(r, property);
